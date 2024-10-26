@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Overall container styling */
+.app {
+  font-family: Arial, sans-serif; 
+  padding: 20px; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; 
+  align-items: center; 
 }
 
-.App-link {
-  color: #61dafb;
+
+.app-header {
+  margin: 10px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.app-header h1 {
+  margin: 0;
+  padding: 12px 20px; 
+  color: #fff; 
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  border-radius: 8px; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+  transition: transform 0.3s ease;
+}
+
+/* Scale effect when hovering over the title */
+.app-header h1:hover {
+  transform: scale(1.05); 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4); 
+}
+
+/* Decorative line under the title */
+.app-header h1:before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #03973c; 
+  margin: 10px auto 0; 
+  border-radius: 2px;
+}
+
+
+.app-controls {
+  margin: 20px 0; 
+}
+
+
+.app-controls button {
+  color: #fff;
+  position: sticky; 
+  top: 0;
+  z-index: 10; 
+  background: linear-gradient(135deg, #7cef8c, #03973c); 
+  border: none;
+  border-radius: 20px; 
+  padding: 8px 16px;
+  margin-left: 10px; 
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.app-controls button:hover {
+  background: linear-gradient(135deg, #7cef8c, #03973c);
+  transform: translateY(-2px); 
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Button effect on click */
+.app-controls button:active {
+  /* Slight down movement */
+  transform: translateY(1px); 
+  /* Reduced shadow on click */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* Category list container styling */
+.category-list {
+  width: 100%;
+  /* Maximum width to maintain layout */
+  max-width: 600px; 
+}
+
+/* Body container styling */
+.app-body {
+  display: flex;
+  justify-content: center; 
+}
+
+.app-content {
+  margin-left: 20px; 
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  gap: 20px;
 }
